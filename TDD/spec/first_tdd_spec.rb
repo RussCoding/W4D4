@@ -88,3 +88,17 @@ describe "#stock_prices" do
     end
 
 end
+
+describe Tower do
+    subject(:tower) {Tower.new}
+    describe "#initialize" do
+        it "should creates a board" do
+            expect(tower.board).to eq([[4,3,2] [], []])
+        end
+    end
+
+    describe "#move" do #move(pickup,putdown)
+        it "should accept parameters between 0 and 3" do
+        it "should allow you to place piece" 
+    end
+end

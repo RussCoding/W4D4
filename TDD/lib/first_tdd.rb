@@ -29,14 +29,6 @@ def my_transpose(matrix)
     transposed
 end
 
-# stock prices
-# [30, 5, 200, 3, 6000, 20, 100]
-#buy day comes before sell day
-#look for the largest range
-#interate through the array with uniq pairs and find the largest range
-
-
-
 def stock_prices(array)
 
     raise ArgumentError unless array.is_a?(Array)
@@ -53,31 +45,9 @@ def stock_prices(array)
             buy_date = array.index(minimum)
         end
     end
-
     [buy_date, sell_date]
 end
 
+class 
 
 
-
-
-    # buy_date = 0
-    # sell_date = 0
-    # buy_price = nil
-    # sell_price = 0
-
-    # sorted = false
-    # while sorted
-    #     sorted = false
-    #     array.each_with_index do |price, idx|
-    #         if price > sell_price && idx > buy_date 
-    #             sorted = true
-    #             sell_price = buy_price
-    #             sell_date = idx
-    #         elsif price == nil || price < buy_price && idx < sell_date
-    #             buy_date = idx
-    #             buy_price = price
-    #             sorted = true
-    #         end
-    #     end
-    # end
