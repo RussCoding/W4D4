@@ -46,3 +46,19 @@ describe "Array" do
 
     end
 end
+
+describe "#my_transpose" do
+    let(:arr) {[[1,2,3],
+                [4,5,6],
+                [7,8,9]]}
+    let(:transposed) {[[1,4,7], [2,5,8], [3,6,9]]}
+    let(:non_square) {[[0,1],[0,1,2,1,1,1]]}
+
+    it "should accept a square matrix" do
+        expect{my_transpose(non_square)}.to raise_error(ArgumentError)
+    end
+
+    it "should return array with rows as columns and columns as rows" do
+        expect(arr.transpose).to eq(transposed)
+    end
+end

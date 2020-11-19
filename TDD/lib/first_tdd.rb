@@ -16,3 +16,15 @@ class Array
         result
     end
 end
+
+def my_transpose(matrix)
+    
+    raise ArgumentError if matrix.any? {|row| matrix.length != row.length}
+    transposed = Array.new(matrix.length) {Array.new}
+    matrix.each do |row|
+        row.each_with_index do |ele, idx|
+            transposed[idx] << ele
+        end 
+    end
+    transposed
+end
