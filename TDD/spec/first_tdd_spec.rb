@@ -62,3 +62,29 @@ describe "#my_transpose" do
         expect(arr.transpose).to eq(transposed)
     end
 end
+
+
+# stock prices
+# [30, 5, 200, 3, 6000, 20, 100]
+#buy day comes before sell day
+#look for the largest range
+#interate through the array with uniq pairs and find the largest range
+
+
+describe "#stock_prices" do
+    let (:arr) {[30, 5, 200, 3, 6000, 20, 100]}
+
+    it "should accept an array" do 
+        expect{stock_prices(5)}.to raise_error(ArgumentError) 
+
+    end
+
+    it "should return the days that will give you the biggest profit" do 
+        expect(stock_prices(arr)).to eq([3,4])
+    end
+
+    it "the buy date should be before the sell date" do
+        expect(stock_prices(arr)[0] < stock_prices(arr)[1]).to eq TRUE
+    end
+
+end
